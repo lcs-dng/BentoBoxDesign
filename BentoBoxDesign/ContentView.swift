@@ -116,6 +116,7 @@ struct ContentView: View {
                             .cornerRadius(14)
                         Text("16-core")
                             .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
                             .padding(.bottom, 65)
                         LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
                             .mask(
@@ -131,6 +132,7 @@ struct ContentView: View {
                         )
                         Text("15.8 trillion ops/s")
                             .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
                             .padding(.top, 65)
                     }
                     ZStack {
@@ -144,6 +146,7 @@ struct ContentView: View {
                         )
                         Text("Faster Neural Engine")
                             .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
                             .padding(.top, 65)
                     }
                 }
@@ -158,6 +161,7 @@ struct ContentView: View {
 media engine with ProRes
 """)
                     .font(Font.system(size: 16).bold())
+                    .foregroundColor(.black)
                 }
             }
             
@@ -167,10 +171,10 @@ media engine with ProRes
                     ZStack {
                         Rectangle()
                             .fill(lightGray)
-                            .frame(width: 115)
                             .cornerRadius(14)
                         Text("Up to")
                             .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
                             .padding(.bottom, 65)
                         LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
                             .mask(
@@ -179,18 +183,36 @@ media engine with ProRes
                         )
                         Text("faster GPU")
                             .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
                             .padding(.top, 65)
                     }
+                    .frame(width: 115)
+
+//                    .border(.green)
+
+                    
                     ZStack {
                         Rectangle()
-                            .fill(mediumGray)
+                            .fill(lightGray)
                             .cornerRadius(14)
+                        
+                    LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .mask(
+                        Text("""
+    Industry-leading
+        performace
+           per watt
+""")
+                        .foregroundColor(.black)
+                        .font(Font.system(size: 16).bold())
+                        )
                     }
                 }
                 .frame(height: 90)
                 ZStack {
                     Rectangle()
                         .fill(lightGray)
+                        .frame(height: 233)
                         .cornerRadius(14)
                     LinearGradient(gradient: Gradient(colors: [darkGray, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
                         .mask(
@@ -210,40 +232,115 @@ media engine with ProRes
                             .padding(.top, 60)
                         )
                 }
-                Rectangle()
-                    .fill(mediumGray)
-                    .frame(height: 65)
-                    .cornerRadius(14)
+                ZStack {
+                    Rectangle()
+                        .fill(lightGray)
+                        .frame(height: 65)
+                        .cornerRadius(14)
+                    Text("Second-generation")
+                        .foregroundColor(.black)
+                        .font(Font.system(size: 10).bold())
+                        .padding(.bottom, 40)
+                    LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .mask(
+                    Text("5 nm technology")
+                        .font(Font.system(size: 30).bold())
+                    )
+                }
             }
             .frame(width: 300)
 
             // Right column
             VStack {
-                Rectangle()
-                    .fill(mediumGray)
-                    .frame(height: 90)
+                ZStack {
+                    Rectangle()
+                        .fill(lightGray)
+                        .frame(height: 90)
                     .cornerRadius(14)
-                HStack {
-                    Rectangle()
-                        .fill(mediumGray)
-                        .cornerRadius(14)
-                    Rectangle()
-                        .fill(mediumGray)
-                        .cornerRadius(14)
+                    Text("Up to")
+                        .font(Font.system(size: 10).bold())
+                        .padding(.bottom, 65)
+                        .foregroundColor(.black)
+                    LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .mask(
+                    Text("96GB")
+                        .font(Font.system(size: 50).bold())
+                    )
+                        .padding(.bottom, 8)
+                    Text("LPDDR5 memory")
+                        .font(Font.system(size: 10).bold())
+                        .foregroundColor(.black)
+                        .padding(.top, 65)
                 }
-                Rectangle()
-                    .foregroundStyle(mediumGray)
-                    .frame(height: 125)
+                HStack {
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                        .cornerRadius(14)
+                        Image(.CPU)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 65)
+                            .padding(.bottom, 35)
+                        LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                            .mask(
+                        Text("12-core")
+                            .font(Font.system(size: 20).bold())
+                        )
+                            .padding(.top, 100)
+                        Text("CPU")
+                            .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
+                            .padding(.top, 140)
+                        
+                    }
+                    ZStack {
+                        Rectangle()
+                            .fill(lightGray)
+                        .cornerRadius(14)
+                        Image(.GPU)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 100)
+                            .padding(.bottom, 50)
+                        Text("Up to")
+                            .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
+                            .padding(.top, 70)
+                        LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                            .mask(
+                        Text("38-core")
+                            .font(Font.system(size: 20).bold())
+                        )
+                            .padding(.top, 103)
+                        Text("GPU")
+                            .font(Font.system(size: 10).bold())
+                            .foregroundColor(.black)
+                            .padding(.top, 140)
+                    }
+                }
+                .frame(height: 170)
+                ZStack {
+                    Rectangle()
+                        .foregroundStyle(lightGray)
+                        .frame(height: 125)
                     .cornerRadius(14)
+                    LinearGradient(gradient: Gradient(colors: [lightPurple,.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .mask(
+                    Text("400GB/s")
+                        .font(Font.system(size: 40).bold())
+                    )
+                        .padding(.bottom, 28)
+                    Text("Memory bandwidth")
+                        .font(Font.system(size: 18).bold())
+                        .foregroundColor(.black)
+                        .padding(.top, 40)
+                }
             }
         }
-        .border(.red)
-        .padding(10)
-        .background(.white)
         .frame(width: 800, height: 400)
-        .border(.green)
         .padding()
-        .border(.blue)
+        .background(.white)
     }
 }
 
